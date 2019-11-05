@@ -7,9 +7,8 @@
 //
 
 public protocol Applicative: Functor {
-	
-	
-	func pure<A, T>(_ a: T) -> A where A.A == T, A: Applicative
-	
-	
+    associatedtype FAB = K1<(A) -> B>
+
+    func pure(_ a: A) -> Self
+    func ap(_ f: FAB) -> FB
 }

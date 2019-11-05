@@ -9,20 +9,19 @@
 import Foundation
 
 public protocol Functor {
-    associatedtype A
-    associatedtype B: Functor = Self
-    /// functor laws
+    /// 1.functor laws
     ///         map(fa, id) == fa
-    ///
     /// 2. Preserve composition:
-    ///
     ///         fmap (f.g) = fmap g . fmap f
 
     /// fmap :: (a -> b) -> f a -> f b
-    func fmap<C>(_ transform: (A) -> C) -> B where B.A == C
-}
 
-extension Functor {
-	
-}
+    /// source
+    associatedtype A
+    /// target
+    associatedtype B
 
+    associatedtype FB = K1<B>
+
+    func fmap(_ f: (A) -> B) -> FB
+}

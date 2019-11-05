@@ -6,14 +6,24 @@
 //  Copyright © 2019 FD. All rights reserved.
 //
 
-precedencegroup FunctionCopositionPrecedence {
+precedencegroup FunctionCompositionPrecedence {
     associativity: right
     higherThan: DefaultPrecedence
 }
 
-infix operator <>: FunctionCopositionPrecedence
+precedencegroup ApplicativePrecedence {
+    associativity: left
+    lowerThan: NilCoalescingPrecedence
+    higherThan: FunctionCompositionPrecedence
+}
+
+infix operator <>: FunctionCompositionPrecedence
 prefix operator <>
 postfix operator <>
 
-infix operator >>> : FunctionArrowPrecedence
-infix operator <<< : FunctionArrowPrecedence
+infix operator >>>: FunctionArrowPrecedence
+infix operator <<<: FunctionArrowPrecedence
+
+infix operator <^>: ApplicativePrecedence
+
+infix operator <*>: ApplicativePrecedence

@@ -9,7 +9,7 @@
 public protocol Monoid: Semigroup {
     static var zero: Self { get }
 
-    func appending(_: Self) -> Self
+    func appending(_ other: Self) -> Self
 }
 
 extension Monoid {

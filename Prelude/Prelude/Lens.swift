@@ -33,3 +33,7 @@ public struct Lens<Whole, Part> {
         )
     }
 }
+
+extension Lens {
+	
+}

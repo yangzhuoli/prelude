@@ -17,6 +17,13 @@
 		65353F71236ADE4B00377FAE /* Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65353F6A236ADE4B00377FAE /* Applicative.swift */; };
 		65353F72236ADE4B00377FAE /* Functor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65353F6B236ADE4B00377FAE /* Functor.swift */; };
 		65353F73236ADE4B00377FAE /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65353F6C236ADE4B00377FAE /* Semigroup.swift */; };
+		658D2C0F237160D600DFE596 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2C0E237160D600DFE596 /* Function.swift */; };
+		658D2C132371655800DFE596 /* Array+Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2C122371655800DFE596 /* Array+Applicative.swift */; };
+		658D2C152371656500DFE596 /* Array+Functor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2C142371656500DFE596 /* Array+Functor.swift */; };
+		658D2C172371656E00DFE596 /* Array+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2C162371656E00DFE596 /* Array+Monad.swift */; };
+		658D2C4723716DE500DFE596 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2C4623716DE500DFE596 /* Kind.swift */; };
+		658D2C4923719AD800DFE596 /* Array+Seimigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2C4823719AD800DFE596 /* Array+Seimigroup.swift */; };
+		658D2C4B23719AE500DFE596 /* Array+Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2C4A23719AE500DFE596 /* Array+Monoid.swift */; };
 		65940702236C0F3200209A2F /* LensHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65940701236C0F3200209A2F /* LensHolder.swift */; };
 		65E9E4C4236AE12C00B89C35 /* Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E4C3236AE12C00B89C35 /* Monad.swift */; };
 		65E9E4C7236B052700B89C35 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E4C6236B052700B89C35 /* Lens.swift */; };
@@ -47,6 +54,13 @@
 		65353F6B236ADE4B00377FAE /* Functor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functor.swift; sourceTree = "<group>"; };
 		65353F6C236ADE4B00377FAE /* Semigroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
 		65353F75236AE02300377FAE /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		658D2C0E237160D600DFE596 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		658D2C122371655800DFE596 /* Array+Applicative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Applicative.swift"; sourceTree = "<group>"; };
+		658D2C142371656500DFE596 /* Array+Functor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Functor.swift"; sourceTree = "<group>"; };
+		658D2C162371656E00DFE596 /* Array+Monad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Monad.swift"; sourceTree = "<group>"; };
+		658D2C4623716DE500DFE596 /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
+		658D2C4823719AD800DFE596 /* Array+Seimigroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Seimigroup.swift"; sourceTree = "<group>"; };
+		658D2C4A23719AE500DFE596 /* Array+Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Monoid.swift"; sourceTree = "<group>"; };
 		65940701236C0F3200209A2F /* LensHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensHolder.swift; sourceTree = "<group>"; };
 		65E9E4C3236AE12C00B89C35 /* Monad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monad.swift; sourceTree = "<group>"; };
 		65E9E4C6236B052700B89C35 /* Lens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
@@ -113,13 +127,27 @@
 			isa = PBXGroup;
 			children = (
 				65353F67236ADE4B00377FAE /* Operator.swift */,
+				658D2C112371654100DFE596 /* Array+Extension */,
 				65E9E4C2236AE0EC00B89C35 /* TypeClass */,
 				65353F66236ADE4B00377FAE /* Curry.swift */,
 				65353F68236ADE4B00377FAE /* Uncurry.swift */,
 				65E9E4C6236B052700B89C35 /* Lens.swift */,
 				65940701236C0F3200209A2F /* LensHolder.swift */,
+				658D2C4623716DE500DFE596 /* Kind.swift */,
 			);
 			path = Prelude;
+			sourceTree = "<group>";
+		};
+		658D2C112371654100DFE596 /* Array+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				658D2C122371655800DFE596 /* Array+Applicative.swift */,
+				658D2C142371656500DFE596 /* Array+Functor.swift */,
+				658D2C162371656E00DFE596 /* Array+Monad.swift */,
+				658D2C4823719AD800DFE596 /* Array+Seimigroup.swift */,
+				658D2C4A23719AE500DFE596 /* Array+Monoid.swift */,
+			);
+			path = "Array+Extension";
 			sourceTree = "<group>";
 		};
 		65E9E4C2236AE0EC00B89C35 /* TypeClass */ = {
@@ -130,6 +158,7 @@
 				65353F6B236ADE4B00377FAE /* Functor.swift */,
 				65353F6C236ADE4B00377FAE /* Semigroup.swift */,
 				65E9E4C3236AE12C00B89C35 /* Monad.swift */,
+				658D2C0E237160D600DFE596 /* Function.swift */,
 			);
 			path = TypeClass;
 			sourceTree = "<group>";
@@ -246,14 +275,21 @@
 			files = (
 				65353F6D236ADE4B00377FAE /* Curry.swift in Sources */,
 				65940702236C0F3200209A2F /* LensHolder.swift in Sources */,
+				658D2C152371656500DFE596 /* Array+Functor.swift in Sources */,
 				65353F70236ADE4B00377FAE /* Monoid.swift in Sources */,
 				65E9E4C7236B052700B89C35 /* Lens.swift in Sources */,
+				658D2C172371656E00DFE596 /* Array+Monad.swift in Sources */,
 				65353F6E236ADE4B00377FAE /* Operator.swift in Sources */,
 				65353F73236ADE4B00377FAE /* Semigroup.swift in Sources */,
 				65353F72236ADE4B00377FAE /* Functor.swift in Sources */,
 				65E9E4C4236AE12C00B89C35 /* Monad.swift in Sources */,
 				65353F6F236ADE4B00377FAE /* Uncurry.swift in Sources */,
 				65353F71236ADE4B00377FAE /* Applicative.swift in Sources */,
+				658D2C132371655800DFE596 /* Array+Applicative.swift in Sources */,
+				658D2C0F237160D600DFE596 /* Function.swift in Sources */,
+				658D2C4723716DE500DFE596 /* Kind.swift in Sources */,
+				658D2C4923719AD800DFE596 /* Array+Seimigroup.swift in Sources */,
+				658D2C4B23719AE500DFE596 /* Array+Monoid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
