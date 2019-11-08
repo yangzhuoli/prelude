@@ -17,3 +17,4 @@ extension Array: Monoid {
         return self <> other
     }
 }
+

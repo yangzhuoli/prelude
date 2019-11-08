@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+extension Array: Monad {
+    func bind(_ f: (A) -> [B]) -> [B] {
+        return flatMap(f)
+    }
+}

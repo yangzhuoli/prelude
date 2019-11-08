@@ -7,5 +7,5 @@
 //
 
 protocol Monad : Applicative {
-	
+	func bind(_ f: (A) -> FB) -> FB
 }

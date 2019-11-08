@@ -10,5 +10,6 @@ public protocol Applicative: Functor {
     associatedtype FAB = K1<(A) -> B>
 
     func pure(_ a: A) -> Self
+	
     func ap(_ f: FAB) -> FB
 }
